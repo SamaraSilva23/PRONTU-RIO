@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Prontuário Eletrônico</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+  href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <div class="logo">
+      <h2>Logo</h2>
+      <p class="subtitle">PRONTUÁRIO ELETRÔNICO</p>
+      <p>Anamnese, exame físico e acompanhamento integral</p>
+    </div>
+
+    <nav class="menu">
+
+  <a href="#">
+    <i class="fi fi-rr-user"></i>
+    Identificação
+  </a>
+
+  <a href="#">
+    <i class="fi fi-rr-file-medical"></i>
+    Histórico
+  </a>
+
+  <a href="#">
+    <i class="fi fi-rr-heart"></i>
+    Saúde
+  </a>
+
+  <a href="#">
+    <i class="fi fi-rr-test-tube"></i>
+    Exames
+  </a>
+
+  <a href="#">
+    <i class="fi fi-rr-envelope"></i>
+    Acompanhamento
+  </a>
+
+</nav>
+
+  </div>
+
+  <!-- CONTEÚDO -->
+  <div class="content">
+
+    <form>
+
+      <!-- IDENTIFICAÇÃO -->
+      <div class="section">
+
+        <h2>1 - Identificação</h2>
+
+        <div class="grid-2">
+
+          <div>
+
+            <label>Nome Social</label>
+            <input type="text">
+
+            <label>Nome Civil</label>
+            <input type="text">
+
+            <label>Pronome</label>
+            <input type="text">
+
+            <label>Idade</label>
+            <input type="number">
+
+            <div class="buttons">
+              <label>Identidade de Gênero</label>      
+              <button>Mulher trans</button>
+              <button>Homem trans</button>
+              <button>Não-binário</button>
+              <button>Outro</button>
+            </div>
+
+          </div>
+
+          <div>
+
+            <label>Contato</label>
+            <input type="text">
+
+            <label>Profissional responsável</label>
+            <input type="text">
+
+            <label>Data da Consulta</label>
+            <input type="date">
+
+            <label>Próxima Consulta</label>
+            <input type="date">
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- HISTÓRICO -->
+      <div class="section">
+
+        <h2>Histórico</h2>
+
+        <!-- QUEIXA -->
+        <div class="section">
+          <h2>2 - Queixa Principal</h2>
+          <textarea></textarea>
+        </div>
+
+        <!-- HDA -->
+        <div class="section">
+          <h2>3 - História da Doença Atual</h2>
+          <textarea></textarea>
+        </div>
+
+        <!-- HISTÓRIA CLÍNICA -->
+        <div class="section">
+
+          <h2>4 - História Clínica</h2>
+
+          <div class="grid-2">
+
+            <div>
+
+              <label>Tempo de Hormonioterapia</label>
+              <input type="text">
+
+              <label>Tipo</label>
+
+              <div class="buttons">
+                <button>Estrogênica</button>
+                <button>Androgênica</button>
+                <button>Bloqueadores</button>
+              </div>
+
+              <label>Administração</label>
+
+              <div class="buttons">
+                <button>Oral</button>
+                <button>IM</button>
+                <button>Transdérmica</button>
+                <button>SC</button>
+              </div>
+
+              <label>Dose</label>
+              <input type="text">
+	
+	     <label>Queixas Relacionadas</label>
+
+              <div class="buttons">
+                <button>Acne</button>
+                <button>Queda de cabelo</button>
+                <button>Retenção hídrica</button>
+                <button>Alteração de humor</button>
+		<button>Libido Alterada</button>
+              </div>
+
+
+              <label>Doenças Associadas</label>
+              <div class="buttons">
+                <button>Hepatopatia</button>
+                <button>Trombose</button>
+                <button>Hipertenção</button>
+                <button>Diabetes</button>
+		<button>Dislipidemia</button>
+              </div>
+
+              <label>Alergias</label>
+              <input type="text">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- SAÚDE SEXUAL -->
+        <div class="section">
+
+          <h2>5 - Saúde Sexual</h2>
+
+          <div class="grid-2">
+
+            <div>
+
+              <label>Atividade sexual</label>
+
+              <div class="buttons">
+                <button>Sim</button>
+                <button>Não</button>
+              </div>
+
+              <label>Número de parceiros</label>
+              <input type="number">
+
+              <label>Uso de preservativo</label>
+
+              <div class="buttons">
+                <button>Sempre</button>
+                <button>Nunca</button>
+		<button>Ás vezes</button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- SAÚDE MENTAL -->
+        <div class="section">
+
+          <h2>7 - Saúde Mental</h2>
+
+          <div class="grid-2">
+
+            <div>
+
+              <label>Humor</label>
+              <input type="text">
+
+              <label>Ansiedade</label>
+              <input type="text">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- EXAME FÍSICO -->
+      <div class="section">
+
+        <h2>9 - Exame Físico</h2>
+
+        <div class="grid-2">
+
+          <div>
+
+            <label>Pressão Arterial</label>
+            <input type="text">
+
+            <label>Peso</label>
+            <input type="text">
+
+          </div>
+
+          <div>
+
+            <label>Frequência Cardíaca</label>
+            <input type="text">
+
+            <label>Altura</label>
+            <input type="text">
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- EXAMES -->
+      <div class="section">
+
+        <h2>11 - Exames Laboratoriais</h2>
+
+        <div class="grid-2">
+
+          <div>
+
+            <label>Hemograma</label>
+            <input type="text">
+
+          </div>
+
+          <div>
+
+            <label>Glicemia</label>
+            <input type="text">
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CONDUTA -->
+      <div class="section">
+
+        <h2>13 - Conduta de Enfermagem</h2>
+
+        <textarea></textarea>
+
+      </div>
+
+      <!-- BOTÃO -->
+      <button class="Salvar" type="submit">
+        Salvar Prontuário
+      </button>
+
+    </form>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Prontuário Eletrônico</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+  href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+  
+</head>
+
+<body>
+
+  <div class="sidebar">
+
+    <div class="logo">
+      <h2>Logo</h2>
+      <p class="subtitle">PRONTUÁRIO ELETRÔNICO</p>
+      <p>Anamnese, exame físico e acompanhamento integral</p>
+    </div>
+
+    <nav class="menu">
+
+  <a href="#">
+    <i class="fi fi-rr-user"></i>
+    Identificação
+  </a>
+
+  <a href="#">
+    <i class="fi fi-rr-file-medical"></i>
+    Histórico
+  </a>
+
+  <a href="#">
+    <i class="fi fi-rr-heart"></i>
+    Saúde
+  </a>
+
+  <a href="#">
+    <i class="fi fi-rr-test-tube"></i>
+    Exames
+  </a>
+
+  <a href="#">
+    <i class="fi fi-rr-envelope"></i>
+    Acompanhamento
+  </a>
+
+</nav>
+
+  </div>
+
+  <!-- CONTEÚDO -->
+  <div class="content">
+
+    <form>
+
+      <!-- IDENTIFICAÇÃO -->
+      <div class="section">
+
+        <h2>1 - Identificação</h2>
+
+        <div class="grid-2">
+
+          <div>
+
+            <label>Nome Social</label>
+            <input type="text" id="nome">
+
+            <label>Nome Civil(Opcional)</label>
+            <input type="text" id="nomeCivil">
+
+            <label>Pronome</label>
+            <input type="text" id="pronome">
+
+            <label>Idade</label>
+            <input type="number" id="idade">
+
+             
+              <label>Identidade de Gênero</label>
+
+              <div class="buttons" id="identidadeGenero">
+              <button type="button" class="btn-select">Mulher trans</button>
+              <button type="button" class="btn-select">Homem trans</button>
+              <button type="button" class="btn-select">Não-binário</button>
+              <button type="button" class="btn-select">Outro</button>
+            </div>
+
+          </div>
+
+          <div>
+
+            <label>Contato</label>
+            <input type="text" id="contato">
+
+            <label>Profissional responsável</label>
+            <input type="text" id="profissional">
+
+            <label>Data da Consulta</label>
+            <input type="date" id="dataConsulta">
+
+            <label>Próxima Consulta</label>
+            <input type="date" id="proximaConsulta">
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- HISTÓRICO -->
+      <div class="section">
+
+        <h2>Histórico</h2>
+
+        <!-- QUEIXA -->
+        <div class="section" >
+          <h2>2 - Queixa Principal</h2>
+          <textarea id="queixaPrincipal" ></textarea>
+        </div>
+
+        <!-- HDA -->
+        <div class="section" >
+          <h2>3 - História da Doença Atual (HDA)</h2>
+          <textarea id="hda"></textarea>
+        </div>
+
+        <!-- HISTÓRIA CLÍNICA -->
+        <div class="section">
+
+          <h2>4 - História Pessoal e Clínica</h2>
+
+          <div class="grid-2">
+
+            <div>
+
+              <label>Tempo de Hormonioterapia</label>
+              <input type="text" id="tempoHormonioterapia">
+
+              <label>Tipo</label>
+
+              <div class="buttons" id="tipoHormonioterapia">
+                <button type="button" class="btn-select">Estrogênica</button>
+                <button type="button" class="btn-select">Androgênica</button>
+                <button type="button" class="btn-select">Bloqueadores</button>
+		            <button type="button" class="btn-select">Outros</button>
+              </div>
+
+              <label>Via de Administração</label>
+
+              <div class="buttons" id="viaAdministracao">
+                <button type="button" class="btn-select">Oral</button>
+                <button type="button" class="btn-select">IM</button>
+                <button type="button" class="btn-select">Transdérmica</button>
+                <button type="button" class="btn-select">SC</button>
+              </div>
+
+              <label>Dose Atual</label>
+              <input type="text" id="doseAtual">
+	
+	     <label>Queixas Relacionadas</label>
+
+              <div class="buttons" id="queixasRelacionadas">
+                <button type="button" class="btn-select">Acne</button>
+                <button type="button" class="btn-select">Queda de cabelo</button>
+                <button type="button" class="btn-select">Retenção hídrica</button>
+                <button type="button" class="btn-select">Alteração de humor</button>
+		            <button type="button" class="btn-select">Libido Alterada</button>
+              </div>
+
+	     <label>Cirurgia de redesignação sexual</label>
+
+             <div class="linha-check">
+             <div class="linha-topo">
+
+             <label class="check" >
+             <input type="checkbox" id="cirurgiaRedesignacaoSim">
+             Sim</label>
+             <span>tipo:</span>
+
+             <input type="text" class="input-mini" id="tipoCirurgiaRedesignacao">
+             </div>
+
+             <div class="linha-baixo">
+
+             <label class="check" >
+             <input type="checkbox" id="cirurgiaRedesignacaoNao">
+             Não</label>
+             <span>intenção futura:</span>
+
+             <label class="check" >
+             <input type="checkbox" id="cirurgiaRedesignacaoIntencao">
+             Sim
+             </label>
+
+             <label class="check" >
+             <input type="checkbox" id="cirurgiaRedesignacaoIntencaoNao">
+             Não
+             </label>
+
+             </div>
+            </div>
+
+              <label>Procedimentos Prévios</label>
+              <div class="buttons" id="procedimentosPrevios">
+                <button type="button" class="btn-select">Mastectomia</button>
+                <button type="button" class="btn-select">Mamoplastia</button>
+                <button type="button" class="btn-select">Histerectomia</button>
+                <button type="button" class="btn-select">Ooforectomia</button>
+		            <button type="button" class="btn-select">Panectomia</button>
+                <button type="button" class="btn-select">Vaginoplastia</button>
+              </div>
+
+              <label>Doenças Associadas</label>
+              <div class="buttons" id="doencasAssociadas">
+                <button type="button" class="btn-select">Hepatopatia</button>
+                <button type="button" class="btn-select">Trombose</button>
+                <button type="button" class="btn-select">Hipertenção</button>
+                <button type="button" class="btn-select">Diabetes</button>
+		            <button type="button" class="btn-select">Dislipidemia</button>
+              </div> 
+
+              <label>Histórico familiar</label>
+              <input type="text" id="historicoFamiliar">
+
+              <label>Alergias</label>
+              <input type="text" id="alergias">
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+        <!-- SAÚDE SEXUAL -->
+       <div class="section">
+
+  <h2>SAÚDE</h2>
+
+  <!-- INVESTIGAÇÃO SEXUAL -->
+  <div class="section">
+
+    <h2>5 - Investigação Sexual e Reprodutiva</h2>
+
+    <div class="grid-2">
+
+      <div>
+
+        <label>Atividade sexual</label>
+
+        <div class="buttons" id="atividadeSexual">
+          <button type="button" class="btn-select">Sim</button>
+          <button type="button" class="btn-select">Não</button>
+        </div>
+
+        <label>Número de parceiros(as) nos últimos 12 meses</label>
+        <input type="number" id="numeroParceiros">
+
+        <label>Tipo(s) de parceira(s)</label>
+
+        <div class="buttons" id="tipoParceira">
+          <button type="button" class="btn-select">Fixa</button>
+          <button type="button" class="btn-select">Ocasional</button>
+          <button type="button" class="btn-select">Múltipla</button>
+        </div>
+
+        <label>Uso de preservativo</label>
+
+        <div class="buttons" id="usoPreservativo">
+          <button type="button" class="btn-select">Sempre</button>
+          <button type="button" class="btn-select">Às vezes</button>
+          <button type="button" class="btn-select">Nunca</button>
+        </div>
+
+        <label>Histórico de ISTs</label>
+
+        <div class="buttons ist-group" id="historicoISTs">
+          <button type="button" class="btn-select">Sim</button>
+          <button type="button" class="btn-select">Não</button>
+          <button type="button" class="btn-select">Quais</button>
+
+          <input type="text" class="input-ist" id="quaisISTs">
+        </div>
+
+        <label>Desejo reprodutivo atual</label>
+
+        <div class="buttons" id="desejoReprodutivo">
+          <button type="button" class="btn-select">Sim</button>
+          <button type="button" class="btn-select">Não</button>
+          <button type="button" class="btn-select">Em dúvida</button>
+        </div>
+
+        <label>Planejamento reprodutivo realizado</label>
+
+        <div class="buttons" id="planejamentoReprodutivo">
+          <button type="button" class="btn-select">Sim</button>
+          <button type="button" class="btn-select">Não</button>
+        </div>
+
+        <label>Acesso a Serviços de saúde sexual e reprodutiva</label>
+
+        <div class="buttons" id="acessoServicosSaude">
+          <button type="button" class="btn-select">Sim</button>
+          <button type="button" class="btn-select">Não</button>
+        </div>
+
+        <label>Orientações recebidas</label>
+        <input type="text" id="orientacoesRecebidas">
+
+      </div>
+
+    </div>
+
+  </div>
+  <!-- FECHAMENTO DA SECTION 5 -->
+
+
+
+  <!-- USO DE MEDICAÇÕES -->
+  <div class="section" id="usoMedicacoes">
+
+    <h2>6 - Uso de Medicações</h2>
+
+    <div class="med-row">
+      <label>Hormonioterapia</label>
+      <input type="text" placeholder="Ex: 2 anos" id="hormonioterapia">
+      <input type="text" placeholder="Observações" id="observacoesHormonioterapia">
+    </div>
+
+    <div class="med-row">
+      <label>Antidepressivos</label>
+      <input type="text" id="antidepressivos">
+      <input type="text" id="observacoesAntidepressivos">
+    </div>
+
+    <div class="med-row">
+      <label>Anti-hipertensivos</label>
+      <input type="text" id="antiHipertensivos">
+      <input type="text" id="observacoesAntiHipertensivos">
+    </div>
+
+    <div class="med-row">
+      <label>Anticoagulantes</label>
+      <input type="text" id="anticoagulantes">
+      <input type="text" id="observacoesAnticoagulantes">
+    </div>
+
+    <div class="med-row">
+      <label>Antiandrogênicos</label>
+      <input type="text" id="antiandrogenicos">
+      <input type="text" id="observacoesAntiandrogenicos">
+    </div>
+
+    <div class="med-row">
+      <label>Outros</label>
+      <input type="text" id="outros">
+      <input type="text" id="observacoesOutros">
+    </div>
+
+  </div>
+
+
+
+  <!-- SAÚDE MENTAL -->
+  <div class="section">
+
+    <h2>7 - Avaliação Mental e Emocional</h2>
+
+    <div class="grid-2">
+
+      <div>
+
+        <label>Humor</label>
+        <input type="text" id="humor">
+
+        <label>Ansiedade</label>
+        <input type="text" id="ansiedade">
+
+        <label>Autoimagem corporal</label>
+        <input type="text" id="autoimagemCorporal">
+
+        <label>Sono</label>
+        <input type="text" id="sono">
+
+        <label>Apoio Familiar/Social</label>
+        <input type="text" id="apoiFamiliarSocial">
+
+        <label>Ideação suicida</label>
+
+        <div class="buttons" id="ideacaoSuicida">
+          <button type="button" class="btn-select">Sim</button>
+          <button type="button" class="btn-select">Não</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ENFRENTAMENTOS SOCIAIS -->
+  <div class="section">
+
+    <h2>8 - Enfrentamentos Sociais e Contextos de Vulnerabilidade</h2>
+
+    <div class="grid-2">
+
+      <div>
+
+        <label>Situação de Moradia</label>
+
+        <div class="buttons" id="situacaoMoradia">
+          <button type="button" class="btn-select">Estável</button>
+          <button type="button" class="btn-select">Instável</button>
+          <button type="button" class="btn-select">Rua</button>
+        </div>
+
+        <label>Vínculos Familiares</label>
+
+        <div class="buttons" id="vinculosFamiliares">
+          <button type="button" class="btn-select">Presentes</button>
+          <button type="button" class="btn-select">Parcialmente</button>
+          <button type="button" class="btn-select">Rompidos</button>
+        </div>
+
+        <label>Acesso ao Trabalho/Renda</label>
+
+        <div class="buttons" id="acessoTrabalhoRenda">
+          <button type="button" class="btn-select">Formal</button>
+          <button type="button" class="btn-select">Informal</button>
+          <button type="button" class="btn-select">Desempregado(a)</button>
+        </div>
+
+        <label>Acesso à Saúde Pública</label>
+
+        <div class="buttons" id="acessoSaudePublica">
+          <button type="button" class="btn-select">Regular</button>
+          <button type="button" class="btn-select">Dificultado</button>
+        </div>
+
+        <label>Discriminação vivida</label>
+
+        <div class="buttons vivida-group" id="discriminacaoVivida">
+          <button type="button" class="btn-select">Nenhuma</button>
+          <button type="button" class="btn-select">Relatada - Descrever</button>
+
+          <input type="text"
+                 class="input-vivida"
+                 id="observacoesDiscriminacaoVivida">
+        </div>
+
+        <label>Rede de Apoio Social</label>
+
+        <div class="buttons" id="redeApoioSocial">
+          <button type="button" class="btn-select">Sim</button>
+          <button type="button" class="btn-select">Não</button>
+        </div>
+
+        <label>Estratégias Enfrentamento</label>
+        <input type="text" id="estrategiasEnfrentamento">
+
+        <label>Encaminhamentos Necessários</label>
+
+        <div class="buttons encaminhamento-group"
+             id="encaminhamentosNecessarios">
+
+          <button type="button" class="btn-select">
+            Serviço Social
+          </button>
+
+          <button type="button" class="btn-select">
+            Psicologia
+          </button>
+
+          <button type="button" class="btn-select">
+            Jurídicos
+          </button>
+
+          <button type="button" class="btn-select">
+            Outros
+          </button>
+
+          <input type="text"
+                 class="input-encaminhamento"
+                 id="observacoesEncaminhamentos">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+      <!-- EXAME FÍSICO -->
+       <section class="section">
+
+        <h2>9 - Exame Físico Geral</h2>
+
+        <div class="subsection">
+          <label>Sinais vitais</label>
+          <div class="vital-row">
+            <div class="vital-item">
+              <span>PA</span>
+              <input type="text" id="pa" placeholder="__/__ mmHg">
+            </div>
+            <div class="vital-item">
+              <span>FC</span>
+              <input type="text" id="frequenciaCardiaca" placeholder="bpm">
+            </div>
+            <div class="vital-item">
+              <span>FR</span>
+              <input type="text" id="frequenciaRespiratoria" placeholder="irpm">
+            </div>
+            <div class="vital-item">
+              <span>Temp</span>
+              <input type="text" id="temperatura" placeholder="°C">
+            </div>
+            <div class="vital-item">
+              <span>SpO₂</span>
+              <input type="text" id="spo2" placeholder="%">
+            </div>
+            <div class="vital-item">
+              <span>Peso</span>
+              <input type="text" id="peso" placeholder="kg">
+            </div>
+            <div class="vital-item">
+              <span>Altura</span>
+              <input type="text" id="altura" placeholder="m">
+            </div>
+            <div class="vital-item">
+              <span>IMC</span>
+              <input type="text" id="imc" placeholder="">
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Pele e pelos</h3>
+          <div class="checks-grid">
+            <div>
+              <span class="group-label">Distribuição</span>
+              <label class="check"><input type="checkbox" name="distribuicaoPele" value="feminina"> Feminina</label>
+              <label class="check"><input type="checkbox" name="distribuicaoPele" value="masculina"> Masculina</label>
+              <label class="check"><input type="checkbox" name="distribuicaoPele" value="mista"> Mista</label>
+            </div>
+            <div>
+              <span class="group-label">Acne</span>
+              <label class="check"><input type="checkbox" name="acne" value="sim"> Sim</label>
+              <label class="check"><input type="checkbox" name="acne" value="nao"> Não</label>
+              <label class="check"><span>Região:</span><input type="text" id="regiaoAcne" placeholder="Região"></label>
+            </div>
+            <div>
+              <span class="group-label">Oleosidade</span>
+              <label class="check"><input type="checkbox" name="oleosidade" value="normal"> Normal</label>
+              <label class="check"><input type="checkbox" name="oleosidade" value="aumentada"> Aumentada</label>
+            </div>
+            <div>
+              <span class="group-label">Queda capilar</span>
+              <label class="check"><input type="checkbox" name="quedaCapilar" value="sim"> Sim</label>
+              <label class="check"><input type="checkbox" name="quedaCapilar" value="nao"> Não</label>
+            </div>
+          </div>
+
+          <label for="estriasPigmentacoes">Estrias / pigmentações</label>
+          <input type="text" id="estriasPigmentacoes" placeholder="Descreva alterações">
+
+          <div class="file-field">
+            <label for="fotoPele">Área para inserção de foto ou marcação digital</label>
+            <input type="file" id="fotoPele" accept="image/*">
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Sistema cardiovascular</h3>
+          <div class="checks-grid">
+            <div>
+              <label class="check"><input type="checkbox" name="pulsosPerifericos" value="palpaveis"> Pulsos periféricos: Palpáveis</label>
+              <label class="check"><input type="checkbox" name="pulsosPerifericos" value="diminuido"> Diminuídos</label>
+            </div>
+            <div>
+              <label class="check"><input type="checkbox" name="edema" value="sim"> Edema: Sim</label>
+              <label class="check"><input type="checkbox" name="edema" value="nao"> Não</label>
+            </div>
+            <div>
+              <label class="check"><input type="checkbox" name="aterosclerose" value="sim"> Sinais de aterosclerose: Sim</label>
+              <label class="check"><input type="checkbox" name="aterosclerose" value="nao"> Não</label>
+            </div>
+          </div>
+          <div class="alert-small">Alarme se PA &gt; 140/90 em 3 medições consecutivas.</div>
+        </div>
+
+        <div class="subsection">
+          <h3>Sistema respiratório</h3>
+          <div class="checks-grid">
+            <div>
+              <label class="check"><input type="checkbox" name="murmurioVesicular" value="presente"> Murmúrio vesicular: Presente</label>
+              <label class="check"><input type="checkbox" name="murmurioVesicular" value="diminuido"> Diminuído</label>
+            </div>
+            <div>
+              <label class="check"><input type="checkbox" name="dispneia" value="sim"> Dispneia: Sim</label>
+              <label class="check"><input type="checkbox" name="dispneia" value="nao"> Não</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Sistema digestivo / hepático</h3>
+          <div class="checks-grid">
+            <div>
+              <label class="check"><input type="checkbox" name="figadoPalpavel" value="sim"> Fígado palpável: Sim</label>
+              <label class="check"><input type="checkbox" name="figadoPalpavel" value="nao"> Não</label>
+            </div>
+            <div>
+              <label class="check"><input type="checkbox" name="nauseasVomitos" value="sim"> Náuseas/vômitos: Sim</label>
+              <label class="check"><input type="checkbox" name="nauseasVomitos" value="nao"> Não</label>
+            </div>
+          </div>
+          <div class="alert-small">Alarme se TGO/TGP alterados.</div>
+        </div>
+
+        <div class="subsection">
+          <h3>Sistema geniturinário</h3>
+          <div class="checks-grid">
+            <div>
+              <span class="group-label">Tipo anatômico</span>
+              <label class="check"><input type="checkbox" name="tipoAnatomico" value="penis"> Pênis</label>
+              <label class="check"><input type="checkbox" name="tipoAnatomico" value="vagina"> Vagina neoconstruída</label>
+              <label class="check"><input type="checkbox" name="tipoAnatomico" value="neofalo"> Neofalo</label>
+              <label class="check"><input type="checkbox" name="tipoAnatomico" value="naoDeclarado"> Não declarado</label>
+            </div>
+            <div>
+              <label class="check"><input type="checkbox" name="corrimento" value="sim"> Corrimento / prurido / dor: Sim</label>
+              <label class="check"><input type="checkbox" name="corrimento" value="nao"> Não</label>
+            </div>
+            <div>
+              <span class="group-label">Micção</span>
+              <label class="check"><input type="checkbox" name="miccao" value="normal"> Normal</label>
+              <label class="check"><input type="checkbox" name="miccao" value="alterada"> Alterada</label>
+            </div>
+          </div>
+          <div class="file-field">
+            <label for="fotoGeniturinario">Área para marcação de cicatrizes, áreas de dor ou inflamação</label>
+            <input type="file" id="fotoGeniturinario" accept="image/*">
+          </div>
+        </div>
+
+      </section>
+
+      <!-- RASTREAMENTO / AVALIAÇÃO -->
+      <section class="section">
+
+        <h2>10 - Avaliação de Órgãos-Alvo e Prevenção de Câncer</h2>
+
+        <div class="table-wrap">
+          <table class="avaliacao-table">
+            <thead>
+              <tr>
+                <th>Rastreamento / Avaliação</th>
+                <th>Indicação</th>
+                <th>Situação</th>
+                <th>Data / Resultado</th>
+                <th>Observações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Exame clínico das mamas</td>
+                <td>Mulheres trans em uso de estrogênio (&gt;5 anos)</td>
+                <td>
+                  <label class="radio-inline">
+                    <input type="radio" name="situacaoMama" value="realizado">
+                    Realizado
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="situacaoMama" value="pendente">
+                    Pendente
+                  </label>
+                </td>
+                <td><input type="text" name="dataMama" placeholder="Data / resultado"></td>
+                <td><input type="text" name="obsMama" placeholder="Observações"></td>
+              </tr>
+              <tr>
+                <td>Mamografia</td>
+                <td>Conforme idade e uso hormonal</td>
+                <td>
+                  <label class="radio-inline">
+                    <input type="radio" name="situacaoMamografia" value="realizado">
+                    Realizada
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="situacaoMamografia" value="pendente">
+                    Pendente
+                  </label>
+                </td>
+                <td><input type="text" name="dataMamografia" placeholder="Data / resultado"></td>
+                <td><input type="text" name="obsMamografia" placeholder="Observações"></td>
+              </tr>
+              <tr>
+                <td>Papanicolau (colo uterino)</td>
+                <td>Homens trans com colo uterino</td>
+                <td>
+                  <label class="radio-inline">
+                    <input type="radio" name="situacaoPapanicolau" value="realizado">
+                    Realizado
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="situacaoPapanicolau" value="pendente">
+                    Pendente
+                  </label>
+                </td>
+                <td><input type="text" name="dataPapanicolau" placeholder="Data / resultado"></td>
+                <td><input type="text" name="obsPapanicolau" placeholder="Observações"></td>
+              </tr>
+              <tr>
+                <td>Toque retal / PSA</td>
+                <td>Mulheres trans com próstata</td>
+                <td>
+                  <label class="radio-inline">
+                    <input type="radio" name="situacaoPSA" value="realizado">
+                    Realizado
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="situacaoPSA" value="pendente">
+                    Pendente
+                  </label>
+                </td>
+                <td><input type="text" name="dataPSA" placeholder="Data / resultado"></td>
+                <td><input type="text" name="obsPSA" placeholder="Observações"></td>
+              </tr>
+              <tr>
+                <td>Avaliação hepática (TGO/TGP)</td>
+                <td>Todos em hormonioterapia</td>
+                <td>
+                  <label class="radio-inline">
+                    <input type="radio" name="situacaoHepatica" value="realizado">
+                    Realizada
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="situacaoHepatica" value="pendente">
+                    Pendente
+                  </label>
+                </td>
+                <td><input type="text" name="dataHepatica" placeholder="Data / resultado"></td>
+                <td><input type="text" name="obsHepatica" placeholder="Observações"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="alert-box alert-yellow">
+          <strong>Alarme amarelo:</strong> Exame preventivo vencido.
+        </div>
+
+        <div class="alert-box alert-red">
+          <strong>Alarme vermelho:</strong> Resultado alterado (PSA↑, citologia anormal, TGO↑).
+        </div>
+
+        <div class="file-field">
+          <label for="anexosPreventivos">Anexar laudos ou imagens digitalizadas</label>
+          <input type="file" id="anexosPreventivos" multiple>
+        </div>
+
+      </section>
+
+      <!-- EXAMES -->
+      <section class="section">
+
+        <h2>11 - Exames Laboratoriais Recentes</h2>
+
+        <div class="table-wrap">
+          <table class="exames-table">
+            <thead>
+              <tr>
+                <th>Exame</th>
+                <th>Resultado</th>
+                <th>Data</th>
+                <th>Observação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hemograma</td>
+                <td><input type="text" id="hemograma" placeholder="Resultado"></td>
+                <td><input type="date" id="dataHemograma"></td>
+                <td><input type="text" id="obsHemograma" placeholder="Observação"></td>
+              </tr>
+              <tr>
+                <td>Glicemia</td>
+                <td><input type="text" id="glicemia" placeholder="Resultado"></td>
+                <td><input type="date" id="dataGlicemia"></td>
+                <td><input type="text" id="obsGlicemia" placeholder="Observação"></td>
+              </tr>
+              <tr>
+                <td>Perfil lipídico</td>
+                <td><input type="text" id="perfilLipidico" placeholder="Resultado"></td>
+                <td><input type="date" id="dataPerfilLipidico"></td>
+                <td><input type="text" id="obsPerfilLipidico" placeholder="Observação"></td>
+              </tr>
+              <tr>
+                <td>TGO/TGP</td>
+                <td><input type="text" id="tgoTgp" placeholder="Resultado"></td>
+                <td><input type="date" id="dataTgoTgp"></td>
+                <td><input type="text" id="obsTgoTgp" placeholder="Observação"></td>
+              </tr>
+              <tr>
+                <td>Prolactina</td>
+                <td><input type="text" id="prolactina" placeholder="Resultado"></td>
+                <td><input type="date" id="dataProlactina"></td>
+                <td><input type="text" id="obsProlactina" placeholder="Observação"></td>
+              </tr>
+              <tr>
+                <td>Estradiol/Testosterona</td>
+                <td><input type="text" id="estradiolTestosterona" placeholder="Resultado"></td>
+                <td><input type="date" id="dataEstradiolTestosterona"></td>
+                <td><input type="text" id="obsEstradiolTestosterona" placeholder="Observação"></td>
+              </tr>
+              <tr>
+                <td>Creatinina</td>
+                <td><input type="text" id="creatina" placeholder="Resultado"></td>
+                <td><input type="date" id="dataCreatina"></td>
+                <td><input type="text" id="obsCreatina" placeholder="Observação"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="alert-box alert-red">
+          <strong>Alerta:</strong> se níveis hormonais ou hepáticos fora da faixa segura.
+        </div>
+
+      </section>
+
+       <!-- Acompanhamentos -->
+      <section class="section">
+
+        <h2>12 - Acompanhamento Interprofissional</h2>
+
+        <div class="table-wrap">
+          <table class="acompanhamento-table">
+            <thead>
+              <tr>
+                <th>Equipe</th>
+                <th>Profissional</th>
+                <th>Data</th>
+                <th>Plano / Observações</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Endocrinologia</td>
+                <td><input type="text" id="profEndocrinologia" placeholder="Nome do profissional"></td>
+                <td><input type="date" id="dataEndocrinologia"></td>
+                <td><input type="text" id="planoEndocrinologia" placeholder="Plano / Observações"></td>
+                <td>
+                  <label class="status-check"><input type="radio" name="statusEndocrinologia" value="ativo"> ✓ Ativo</label>
+                  <label class="status-check"><input type="radio" name="statusEndocrinologia" value="inativo"> ✗ Inativo</label>
+                </td>
+              </tr>
+              <tr>
+                <td>Psicologia</td>
+                <td><input type="text" id="profPsicologia" placeholder="Nome do profissional"></td>
+                <td><input type="date" id="dataPsicologia"></td>
+                <td><input type="text" id="planoPsicologia" placeholder="Plano / Observações"></td>
+                <td>
+                  <label class="status-check"><input type="radio" name="statusPsicologia" value="ativo"> ✓ Ativo</label>
+                  <label class="status-check"><input type="radio" name="statusPsicologia" value="inativo"> ✗ Inativo</label>
+                </td>
+              </tr>
+              <tr>
+                <td>Serviço Social</td>
+                <td><input type="text" id="profServicoSocial" placeholder="Nome do profissional"></td>
+                <td><input type="date" id="dataServicoSocial"></td>
+                <td><input type="text" id="planoServicoSocial" placeholder="Plano / Observações"></td>
+                <td>
+                  <label class="status-check"><input type="radio" name="statusServicoSocial" value="ativo"> ✓ Ativo</label>
+                  <label class="status-check"><input type="radio" name="statusServicoSocial" value="inativo"> ✗ Inativo</label>
+                </td>
+              </tr>
+              <tr>
+                <td>Nutrição</td>
+                <td><input type="text" id="profNutricao" placeholder="Nome do profissional"></td>
+                <td><input type="date" id="dataNutricao"></td>
+                <td><input type="text" id="planoNutricao" placeholder="Plano / Observações"></td>
+                <td>
+                  <label class="status-check"><input type="radio" name="statusNutricao" value="ativo"> ✓ Ativo</label>
+                  <label class="status-check"><input type="radio" name="statusNutricao" value="inativo"> ✗ Inativo</label>
+                </td>
+              </tr>
+              <tr>
+                <td>Fisioterapia / Fono / Cirurgia Plástica</td>
+                <td><input type="text" id="profFisioterapia" placeholder="Nome do profissional"></td>
+                <td><input type="date" id="dataFisioterapia"></td>
+                <td><input type="text" id="planoFisioterapia" placeholder="Plano / Observações"></td>
+                <td>
+                  <label class="status-check"><input type="radio" name="statusFisioterapia" value="ativo"> ✓ Ativo</label>
+                  <label class="status-check"><input type="radio" name="statusFisioterapia" value="inativo"> ✗ Inativo</label>
+                </td>
+              </tr>
+              <tr>
+                <td>Outros</td>
+                <td><input type="text" id="profOutros" placeholder="Nome do profissional"></td>
+                <td><input type="date" id="dataOutros"></td>
+                <td><input type="text" id="planoOutros" placeholder="Plano / Observações"></td>
+                <td>
+                  <label class="status-check"><input type="radio" name="statusOutros" value="ativo"> ✓ Ativo</label>
+                  <label class="status-check"><input type="radio" name="statusOutros" value="inativo"> ✗ Inativo</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="legend-box">
+          <span class="legend-item"><strong>✓ Sinal verde:</strong> acompanhamento ativo</span>
+          <span class="legend-item"><strong>✗ Sinal vermelho:</strong> não há equipe atuante</span>
+        </div>
+
+      </section>
+
+      <!-- CONDUTA -->
+      <section class="section">
+
+        <h2>13 - Conduta de Enfermagem</h2>
+
+        <div class="conduct-item">
+          <label>• Educação em saúde:</label>
+          <input type="text" id="educacaoSaude" placeholder="__________________________">
+        </div>
+
+        <div class="conduct-item">
+          <label>• Orientações dadas:</label>
+          <input type="text" id="orientacoesDadas" placeholder="__________________________">
+        </div>
+
+        <div class="conduct-item">
+          <label>• Encaminhamentos:</label>
+          <input type="text" id="encaminhamentos" placeholder="__________________________">
+        </div>
+
+      </section>
+
+      <!-- PLANEJAMENTO -->
+      <section class="section">
+
+        <h2>14 - Planejamento e Alarmes</h2>
+
+        <div class="plan-item">
+          <label>• Próxima consulta:</label>
+          <input type="date" id="dataPlanejamento">
+        </div>
+
+        <div class="alarms-container">
+          <label class="alarms-title">• Alarmes automáticos configuráveis:</label>
+          <div class="alarms-list">
+            <div class="alarm-check">
+              <label class="check"><input type="checkbox" name="alarmeHormonal"> Revisão hormonal → a cada 3 meses</label>
+            </div>
+            <div class="alarm-check">
+              <label class="check"><input type="checkbox" name="alarmeHepatica"> Avaliação hepática → a cada 6 meses</label>
+            </div>
+            <div class="alarm-check">
+              <label class="check"><input type="checkbox" name="alarmePreventivos"> Preventivos (mamas, colo, próstata) → anual</label>
+            </div>
+            <div class="alarm-check">
+              <label class="check"><input type="checkbox" name="alarmeEmocional"> Acompanhamento emocional e social → conforme necessidade</label>
+            </div>
+          </div>
+        </div>
+
+         <div class="alert-box alert-red">
+          <strong>Alerta crítico:</strong> risco mental ou social → notificação imediata à equipe
+        </div>
+
+      </section>
+
+      <!-- OBSERVAÇÕES -->
+      <section class="section">
+
+        <h2>15 - Observações Finais</h2>
+
+        <textarea id="observacoesFinais"></textarea>
+
+      </section>
+
+      <!-- BOTÃO -->
+      <button class="Salvar" type="button" onclick="salvarDados()">
+        Salvar Prontuário
+      </button>
+
+    </form>
+
+  </div>
+  <script src="Script.js"></script>
+</body>
+
+</html>

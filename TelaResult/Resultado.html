@@ -257,175 +257,114 @@
       </div>
     </div>
 
+     <div class="card">
 
+      <h2>Contexto Social</h2>
 
+      <div class="linha">
+        <strong>Estratégias de Enfrentamento:</strong>
+        <span id="estrategiasEnfrentamento"></span>
+      </div>
+
+    </div>
+
+    <!-- EXAME FÍSICO -->
+    <div class="card">
+
+      <h2>Exame Físico</h2>
+
+      <div class="linha">
+        <strong>Pressão Arterial:</strong>
+        <span id="pressaoArterial"></span>
+      </div>
+
+      <div class="linha">
+        <strong>Peso:</strong>
+        <span id="peso"></span>
+      </div>
+
+      <div class="linha">
+        <strong>Frequência Cardíaca:</strong>
+        <span id="frequenciaCardiaca"></span>
+      </div>
+
+      <div class="linha">
+        <strong>Altura:</strong>
+        <span id="altura"></span>
+      </div>
+
+    </div>
+
+    <!-- EXAMES -->
+    <div class="card">
+
+      <h2>Exames Laboratoriais</h2>
+
+      <div class="linha">
+        <strong>Hemograma:</strong>
+        <span id="hemograma"></span>
+      </div>
+
+      <div class="linha">
+        <strong>Glicemia:</strong>
+        <span id="glicemia"></span>
+      </div>
+
+    </div>
+
+    <!-- CONDUTA -->
+    <div class="card">
+
+      <h2>Conduta de Enfermagem</h2>
+
+      <div class="linha">
+        <strong>Educação em Saúde:</strong>
+        <span id="educacaoSaude"></span>
+      </div>
+
+      <div class="linha">
+        <strong>Orientações Dadas:</strong>
+        <span id="orientacoesDadas"></span>
+      </div>
+
+      <div class="linha">
+        <strong>Encaminhamentos:</strong>
+        <span id="encaminhamentos"></span>
+      </div>
+
+    </div>
+
+    <!-- PLANEJAMENTO -->
+    <div class="card">
+
+      <h2>Planejamento</h2>
+
+      <div class="linha">
+        <strong>Próxima Consulta:</strong>
+        <span id="dataPlanejamento"></span>
+      </div>
+
+    </div>
+
+    <!-- OBSERVAÇÕES -->
+    <div class="card">
+
+      <h2>Observações Finais</h2>
+
+      <div class="linha">
+        <span id="observacoesFinais"></span>
+      </div>
+
+    </div>
 
 
     <button
-      class="voltar"
-      onclick="window.location.href='index.html'">
-
-      Voltar
-
-    </button>
+  class="voltar"
+  onclick="window.location.href='../TelaInicial/index.html'">
+  Voltar
+</button>
 
   </div>
-
-
-  <script>
-
-    const dados =
-    JSON.parse(localStorage.getItem("prontuario"));
-
-
-    function mostrar(id, valor){
-
-      if(Array.isArray(valor)){
-        valor = valor.join(", ");
-      }
-
-      document.getElementById(id).innerText =
-      valor || "Não informado";
-
-    }
-
-    function formatarData(data){
-
-    if(!data){
-    return "Não informado";
-    }
-
-  return new Date(data).toLocaleDateString("pt-BR");
-
-}
-
-
-    mostrar("nome", dados.nome);
-    mostrar("nomeCivil", dados.nomeCivil);
-    mostrar("pronome", dados.pronome);
-    mostrar("idade", dados.idade);
-    mostrar("identidadeGenero", dados.identidadeGenero);
-    mostrar("contato", dados.contato);
-    mostrar("profissional", dados.profissional);
-    mostrar("dataConsulta",formatarData(dados.dataConsulta));
-    mostrar("proximaConsulta",formatarData(dados.proximaConsulta));
-
-    mostrar("queixaPrincipal", dados.queixaPrincipal);
-    mostrar("hda", dados.hda);
-
-    mostrar(
-      "tempoHormonioterapia",
-      dados.tempoHormonioterapia
-    );
-
-    mostrar(
-      "tipoHormonioterapia",
-      dados.tipoHormonioterapia
-    );
-
-    mostrar(
-      "viaAdministracao",
-      dados.viaAdministracao
-    );
-
-    mostrar("doseAtual", dados.doseAtual);
-
-    mostrar(
-      "queixasRelacionadas",
-      dados.queixasRelacionadas
-    );
-
-    mostrar(
-      "cirurgiaRedesignacaoSexual",
-      dados.cirurgiaRedesignacaoSexual
-    );
-
-
-    mostrar(
-      "procedimentosPrevios",
-      dados.procedimentosPrevios
-    );
-
-    mostrar(
-      "doencasAssociadas",
-      dados.doencasAssociadas
-    );
-
-    mostrar(
-      "historicoFamiliar",
-      dados.historicoFamiliar
-    );
-
-    mostrar("alergias", dados.alergias);
-
-    mostrar(
-      "atividadeSexual",
-      dados.atividadeSexual
-    );
-
-    mostrar(
-      "numeroParceiros",
-      dados.numeroParceiros
-    );
-
-    mostrar(
-      "tiposParceiros",
-      dados.tiposParceiros
-    );
-    mostrar(
-      "usoPreservativo",
-      dados.usoPreservativo
-    );
-
-    mostrar(
-      "historicoISTs",
-      dados.historicoISTs
-    );
-
-        mostrar(
-        "desejoReprodutivo",
-        dados.desejoReprodutivo
-        );
-
-    mostrar(
-      "planejamentoReprodutivo",
-      dados.planejamentoReprodutivo
-    );
-    mostrar(
-      "acessoServicosSaude",
-      dados.acessoServicosSaude
-    );
-
-    mostrar(
-      "orientacaoRecebidas",
-      dados.orientacaoRecebidas
-    );
-
-    mostrar("humor", dados.humor);
-    mostrar("ansiedade", dados.ansiedade);
-    mostrar(
-      "autoimagemCorporal",
-      dados.autoimagemCorporal
-    );
-    mostrar("sono", dados.sono);
-     mostrar(
-      "apoiofamiliar",
-      dados.apoiofamiliar
-    );
-
-    mostrar(
-      "ideacaoSuicida",
-      dados.ideacaoSuicida
-    );
-
-    mostrar("hormonio", dados.hormonio);
-    mostrar("antidepre", dados.antidepre);  
-    mostrar("antihipertensivos", dados.antihipertensivos);
-    mostrar("anticoagulantes", dados.anticoagulantes);
-    mostrar("antiandrogênicos", dados.antiandrogênicos);
-    mostrar("outros", dados.outros);
-
-  </script>
 
 </body>
 </html>
